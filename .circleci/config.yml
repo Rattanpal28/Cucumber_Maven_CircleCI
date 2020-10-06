@@ -23,7 +23,7 @@ jobs:
             - v1-dependencies-{{ checksum "pom.xml" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-		
-      - run: chmod +x /home/circleci/repo/drivers/chromedriver_linux64	
+      - run: chmod +x /home/circleci/repo/drivers/chromedriver_linux64
       # run tests!
       - run: pwd
       - run: sudo apt-get install libxss1 libappindicator1 libindicator7
