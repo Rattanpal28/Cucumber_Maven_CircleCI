@@ -15,15 +15,16 @@ jobs:
       MAVEN_OPTS: -Xmx3200m
     steps:
       - checkout
-       
+         
       - run: echo "Running from .circleci/config.yml"
+      - run: pwd
       # Download and cache dependencies
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "pom.xml" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-		
-      - run: chmod +x /home/circleci/repo/drivers/chromedriver_linux64
+      - run: chmod +x /home/circleci/repo/drivers/chromedriverlinux
 
       # run tests!
       - run: pwd
@@ -52,7 +53,7 @@ jobs:
 
        # run tests!
       - run: ls -lrt /home/circleci/repo/drivers/
-      - run: sudo chmod 777 /home/circleci/repo/drivers/chromedriver_linux64
+      - run: sudo chmod 777 /home/circleci/repo/drivers/chromedriverlinux
       - run: ls -lrt /home/circleci/repo/drivers/
       - run: mvn clean install -e	
       - store_artifacts:
