@@ -62,4 +62,3 @@ jobs:
       - store_test_results:
           path: ~/repo/report
       #- run: mail -s "Cucumber Test Results" -a ~/repo/report/cucumber-html-reports/overview-features.html vinesh.c@brillio.com < ~/repo/report/cucumber-html-reports/
-#adding a comment
